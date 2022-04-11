@@ -6,4 +6,10 @@ os dados são muito grandes passam de 410Mb, então vou deixar aqui somente o li
 
 [Big Five Personality Test](https://www.kaggle.com/datasets/tunguz/big-five-personality-test)
 
-Para executar, 
+Para executar, este projeto, utilize o arquivo `Jupyter-main.ipynb`
+
+Para acompanhar o projeto pelo VSCODE, faça os seguintes passos:
+1. crie um ambiente virtual;
+2. instale todas as dependencias do arquivo `REQUIREMENTS.TXT` com o comando `pip install -r requirements.py` 
+3. utiliza o arquivo `main.py`
+
