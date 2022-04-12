@@ -1,6 +1,8 @@
 import os
 from io import open
+from random import random
 
+import gradio as gr
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
@@ -67,7 +69,7 @@ data_soma["Receptivo"] = data[opn].sum(axis=1) / 10
 data_soma["clusters"] = predicoes
 
 # Visualizando as médias
-data_clusters = data_soma.groupby('clusters').mean()
+data_clusters = data_soma.groupby("clusters").mean()
 
 # criando os gráficos de cada grupo
 plt.figure(figsize=(22, 3))
@@ -78,3 +80,10 @@ for i in range(0, 5):
     plt.title("Grupo" + str(i))
     plt.xticks(rotation=45)
     plt.ylim(0, 4)
+
+data[:0].to_excel("perguntas.xlsx", index=False)
+
+meus_dados = pd.read_excel("perguntas.xlsx")
+
+grupo_personalidade = k_fit.predict(meus_dados)[0]
+print("Meu grupo de personalidade é:", grupo_personalidade)
